@@ -25,5 +25,6 @@ router.register(r'member', views.MemberViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^api/', include(router.urls))
+    url(r'^api/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
